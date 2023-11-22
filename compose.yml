@@ -1,6 +1,6 @@
 version: "3"
 services:
   dockerinclass:
-    build: ./
+    image: nokerenee/dockergitactioninclass
     ports:
       - "4000:8080"
