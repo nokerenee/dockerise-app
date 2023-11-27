@@ -1,11 +1,12 @@
-const express = require('express')
-const app = express()
-const port = 8080
+require('dotenv').config();
+const app = require('express')();
+const port = process.env.port || 8080;
+const env = process.env.NODE_ENV;
 
 app.get('/', (req, res) => {
-  res.send('Update to image, server is up and running!')
-})
+  res.send(`Server is up, this is a class demo in ${env}.`);
+});
 
 app.listen(port, () => {
-  console.log(`Example app listening on port ${port}`)
-})
+  console.log(`Example app listening on port ${port}`);
+});
